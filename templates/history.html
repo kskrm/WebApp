@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record['friendname'] }}</td>
+                    <td>{{ record['age'] }}</td>
+                    <td>{{ record['item'] }}</td>
+                    <td>{{ record['price'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

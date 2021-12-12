@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mypage
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Age</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user['username'] }}</td>
+                    <td>{{ user['birthday'] }}</td>
+                    <td>{{ user['age'] }}</td>
+                    <td>{{ user['item'] }}</td>
+                    <td>{{ user['price'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

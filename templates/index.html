@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Birthdays
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Age</th>
+            </tr>
+            {% for friend in friends %}
+                <tr>
+                    <td>{{ friend['friendname'] }}</td>
+                    <td>{{ friend['birthday'] }}</td>
+                    <td>{{ friend['age'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
