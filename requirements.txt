@@ -2,9 +2,3 @@ cs50
 Flask
 Flask-Session
 requests
-
-DB SQL:
- CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, email NVARCHAR(320) NOT NULL, birthday DATETIME, item TEXT, price FLOAT, age INT, PRIMARY KEY(id));
- CREATE UNIQUE INDEX username ON users (username);
- CREATE TABLE friends (user_id INTEGER, friendname TEXT NOT NULL, birthday DATETIME NOT NULL, age INT, FOREIGN KEY(user_id) REFERENCES users(id));
- CREATE TABLE records (user_id INTEGER, friendname TEXT NOT NULL, age INT NOT NULL, item TEXT NOT NULL, price FLOAT NOT NULL, FOREIGN KEY(user_id) REFERENCES users(id));
